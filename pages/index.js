@@ -26,13 +26,13 @@ export default function Home() {
   return (
     <div>
       <main className='relative h-screen'>
-        <Image src='/beach-bg.jpg' layout='fill' className='absolute z-0' />
+        <Image alt='beach' src='/beach-bg.jpg' layout='fill' className='absolute z-0' />
         <div className='absolute w-full h-screen bg-black/30 z-20 backdrop-blur-sm' />
         <Layout>
           <div className='h-full relative grid place-items-center'>
             <div className='flex flex-col md:flex-row gap-8 items-center md:gap-0 md:justify-between md:max-w-[50%] w-full mx-auto'>
               {options.map((option) => (
-                <OptionCard option={option} />
+                <OptionCard key={option.title} option={option} />
               ))}
             </div>
           </div>

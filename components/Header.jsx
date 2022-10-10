@@ -36,7 +36,7 @@ const Header = () => {
                 <div className='hidden md:block'>
                     <div className="flex items-center gap-4 font-semibold text-white">
                         {links.map((link) => (
-                            <Link href={link.href}>
+                            <Link key={link.title} href={link.href}>
                                 <p className='cursor-pointer hover:text-cyan-500 transition duration-200 ease-in'>
                                     {link.title}
                                 </p>
